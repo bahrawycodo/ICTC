@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="assets/images/favicon.svg"/>
+    <title>ICTC</title>
+    <link rel="stylesheet" href="assets/css/fontawesome.css"/>
+    <link rel="stylesheet" href="assets/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-rtl.css"/>
+    <link rel="stylesheet" href="assets/css/slick-theme.css"/>
+    <link rel="stylesheet" href="assets/css/slick.css"/>
+    <link rel="stylesheet" href="assets/css/swiper.css"/>
+    <link rel="stylesheet" href="assets/css/LineSlider.css"/>
+
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+<header>
+    <div class="top-nav">
+        <div class="container h-100">
+            <div class="d-flex gap-5 h-100 float-end">
+                <div class="right d-flex align-items-center gap-3">
+                    <div class="lang-flags btn-group  gap-1">
+                        <a href="#" class="btn "> <span class="fi fi-eg"></span></a>
+                        <a href="#" class="btn"> <span class="fi fi-kw"></span></a>
+                    </div>
+                    <ul class="list-group list-group-horizontal gap-3 linksContainer">
+                        <li class="list-group-item d-flex gap-2 justify-content-center align-items-center"><a href="tel:+965 876 521 43">+965 876 521 43</a><i class="fa-solid fa-phone"></i></li>
+                        <li class="list-group-item d-flex gap-2 justify-content-center align-items-center"><a href="mailto:support@website.com">support@website.com</a><i class="fa-regular fa-paper-plane"></i></li>
+                    </ul>
+                </div>
+                <div class="left d-flex align-items-center">
+                    <ul class="list-group list-group-horizontal gap-1 socialmedia">
+                        <li class="list-group-item linkedin"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li class="list-group-item facebook"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="list-group-item instagram"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="list-group-item whatsapp"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li class="list-group-item youtube"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li class="list-group-item twitter"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white clearfix">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img class="navbar-logo" src="assets/images/Logo.svg" alt=""/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MainNav" aria-controls="MainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="MainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">عن المركز</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الخطة التدريبية</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">البرامج التدريبية</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">البرامج التدريبية</a></li>
+                            <li><a class="dropdown-item" href="#">أحدث البرامج</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">أتصل بنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">تسجيل الدخول</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 left">
+                    <div class="input-group search">
+                        <span class="input-group-text"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input type="search" class="form-control" placeholder="بحث ..." id="NavBarSearch" />
+                    </div>
+                    <button type="button" class="btn d-flex align-items-center gap-2 lang"><i class="fa-light fa-globe"></i> <span>English</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="page program pt-5 pb-3 ">
+        <div class="container">
+            <div class="row align-items-center ProgramHeader">
+                <div class="col-md-4">
+                    <h3 class="mb-3">التسجيل في الدورة التدريبية</h3>
+                </div>
+                <div class="col-md-8">
+                    <ul class="lineSlider mb-3"></ul>
+                </div>
+            </div>
+            <div class="row ProgramRegister">
+                <div class="col-md-9">
+                    <div class="card formRegister mb-3">
+                        <div class="card-body p-4">
+                            <div class="row row-gap-2">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">نوع الدورة التدريبية</label>
+                                        <div class="customSelect" id="CourseType" data-awesome="fa-solid fa-book-open-cover">
+                                            <select>
+                                                <option value="1">اونلاين</option>
+                                                <option value="0">اوفلاين</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">التخصص</label>
+                                        <div class="customSelect" id="CourseSpecialization" data-awesome="fa-solid fa-graduation-cap">
+                                            <select>
+                                                <option value="0">المحاسبة والمالية</option>
+                                                <option value="1">برمجة</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label">اسم الدورة التدريبية</label>
+                                        <div class="customSelect" id="CourseTitle" data-awesome="fa-solid fa-books">
+                                            <select>
+                                                <option value="0">إعداد وتحليل وإدارة الرواتب</option>
+                                                <option value="1">بايثون</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label">اسم الدورة التدريبية</label>
+                                        <div class="table-wrapper">
+                                            <table class="table table-bordered mb-0">
+                                                <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>التاريخ</th>
+                                                    <th>المدينة</th>
+                                                    <th>اللغة</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <label class="TableCheck">
+                                                            <input type="checkbox"/>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>9 - 5 يوليو 2024</td>
+                                                    <td>الكويت - الصالحية</td>
+                                                    <td>العربية</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="TableCheck">
+                                                            <input type="checkbox"/>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>9 - 5 يوليو 2024</td>
+                                                    <td>الكويت - الصالحية</td>
+                                                    <td>العربية</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="TableCheck">
+                                                            <input type="checkbox"/>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>9 - 5 يوليو 2024</td>
+                                                    <td>الكويت - الصالحية</td>
+                                                    <td>العربية</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card formRegister mb-3">
+                        <div class="card-body p-4">
+                            <div class="row row-gap-2">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label">البريد الإلكتروني</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-envelope"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال بريدك الإلكتروني">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">الإسم الأول</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال إسمك الأول">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">اسم العائلة</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال إسم العائلة">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">المسمي الوظيفي</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-briefcase"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال المسمي الوظيفي">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">رقم الهاتف</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-regular fa-mobile"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال رقم هاتفك">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">الشركة</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-buildings"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال إسم شركتك">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">العنوان</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-location-dot"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال العنوان">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">صندوق البريد</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-mailbox"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال رقم صندوق البريد">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">المدينة</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" ><i class="fa-solid fa-city"></i></span>
+                                            <input type="text" class="form-control" placeholder="قم بإدخال المدينة">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">البلد</label>
+                                        <div class="customSelect" id="ChooseCountry" data-awesome="fa-solid fa-map-location-dot">
+                                            <select>
+                                                <option value="">اختر البلد</option>
+                                                <option value="1">مصر</option>
+                                                <option value="2">السعودية</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="SideBar">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6>تفاصيل الدورة التدريبية</h6>
+                                <div class="d-flex justify-content-between">
+                                    <span class="courseTitle">إعداد وتحليل وإدارة الرواتب</span>
+                                    <span class="price">1250$</span>
+                                </div>
+                                <p>يقدم المستشار عرضاً تقديميا وأمثلة . ويطلب من المشاركين القيام بتمارين علي برنامج إكسل للرواتب والمزايا . بالإضافة إلي ورش العمل الجماعية والعروض التقديمية .</p>
+                                <ul>
+                                    <li>الرسوم خاضعة لضريبة القيمة المضافة في حال وجوبها .</li>
+                                    <li>تشمل الرسوم استراحات القهوة اليومية و بوفية غداء .</li>
+                                </ul>
+                                <div class="d-flex justify-content-between">
+                                    <span class="TaxRegistrationTitle">رقم التسجيل الضريبي:</span>
+                                    <span class="TaxRegistrationNumber">100239834300003</span>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <a href="#" class="btn DiscountPlan">خطط الخصم وسياسة الإلغاء</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons d-flex flex-column gap-3 mt-3">
+                            <a href="#" class="btn primary">التالي</a>
+                            <a href="#" class="btn secondary">السابق</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container position-relative">
+        <div class="footer-widgets">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="widget pt-5 pb-5">
+                        <div class="logo mb-4">
+                            <a href="#"><img src="assets/images/Logo.svg" alt="" class="ImgWhite"/></a>
+                        </div>
+                        <h3 class="title fs-6">المركز الدولي للتدريب والإستشارات</h3>
+                        <p class="text-align-justify">نعمل علي تطوير نظام التدريب المهني وفق معايير الجودة العالمية وتقديم الخدمات والحلول التدريبية لتطوير الموارد البشرية وفق الاحتياجات الحالية والمستقبلية للشركات والمنظمات</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget pt-5 pb-5">
+                        <h3 class="title fs-6">نظرة عامة</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item "><a href="#">عن المركز</a></li>
+                            <li class="list-group-item "><a href="#">الإستشارات</a></li>
+                            <li class="list-group-item "><a href="#">الشروط والأحكام</a></li>
+                            <li class="list-group-item "><a href="#">سياسة الإلغاء والاسترداد</a></li>
+                            <li class="list-group-item "><a href="#">سياسة الخصوصية</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="widget pt-5 pb-5">
+                        <h3 class="title fs-6">اتصل بنا</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item "><i class="fa-solid fa-location-dot"></i><span class="title mx-2">العنوان :</span><span>الكويت / محافظة الأحمدي / منطقة غرناطة / شارع 18 .</span></li>
+                            <li class="list-group-item "><i class="fa-solid fa-phone-flip"></i><span class="title mx-2">الهاتف :</span><span><a href="tel:+965 876 521 43">+965 876 521 43</a></span></li>
+                            <li class="list-group-item "><i class="fa-regular fa-paper-plane"></i><span class="title mx-2">البريد الإلكتروني :</span><span><a href="mailto:support@website.com">support@website.com</a></span></li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal justify-content-center mt-4 gap-2 socialmedia">
+                            <li class="list-group-item"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li class="list-group-item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class="list-group-item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li class="list-group-item"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li class="list-group-item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li class="list-group-item"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="d-flex list-group-horizontal pt-3 pb-3 mb-0">
+                        <li class="list-group-item pe-2 position-relative"><a href="#">سياسة الخصوصية</a></li>
+                        <li class="list-group-item ps-2 position-relative"><a href="#">خريطة الموقع</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <p class="copyright pt-3 pb-3 mb-0">&copy; جميع الحقوق محفوظة لـ <a href="">المركز الدولي للتدريب والإستشارات</a> <span>2024</span></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/customselect.js"></script>
+<script src="assets/js/LineSlider.js"></script>
+<script src="assets/js/programDetailsSlider.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    $('.lineSlider').lineSlider([
+        { 'name': "تفاصيل الدورة", 'active': false },
+        { 'name': "التسجيل", 'active': true },
+        { 'name': "الدفع", 'active': false }
+    ]);
+        $('.formRegister').on('change','.TableCheck input[type="checkbox"]',function() {
+            // Find the parent <tr> element
+            var $tr = $(this).closest('tr');
+            if ($(this).prop('checked')) {
+                $tr.addClass('active');
+            } else {
+                $tr.removeClass('active');
+            }
+        });
+
+</script>
+</body>
+</html>

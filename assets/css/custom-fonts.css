@@ -1,0 +1,16 @@
+@font-face {
+    src: url("../fonts/UniversNextArabic-Regular.otf");
+    font-family: UniversNextArabic;
+}
+@font-face {
+    src: url("../fonts/FFShamelFamily-SansOneBold.ttf");
+    font-family: SansOneBold;
+}
+@font-face {
+    src: url("../fonts/FFShamelFamily-SansOneBook.ttf");
+    font-family: SansOneBook;
+}
+@font-face {
+    src: url("../fonts/MYRIADPRO-REGULAR.OTF");
+    font-family: MyRiadpro;
+}
