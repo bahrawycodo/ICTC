@@ -64,7 +64,7 @@ if($(".client_opinions_carousel").length > 0) {
                 },
             },
             {
-                breakpoint: 678,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                 },
@@ -73,6 +73,59 @@ if($(".client_opinions_carousel").length > 0) {
                 breakpoint: 575,
                 settings: {
                     slidesToShow: 1,
+                },
+            },
+        ]
+    });
+}
+if($(".clients_carousel").length > 0) {
+    $('.clients_carousel').slick({
+        dots: true,
+        speed: 1000,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        pauseOnHover: true,
+        autoplaySpeed: 5000,
+        prevArrow: ".CO_left_arrow",
+        nextArrow: ".CO_right_arrow",
+        rtl: rtl_setting,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 },
             },
         ]
