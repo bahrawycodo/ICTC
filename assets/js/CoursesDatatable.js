@@ -44,9 +44,26 @@
         }
         function  handleSelectText(){
             if(settings.lang =='en')
-                return "Number of items per page";
+            {
+                $datatable.find('.dataTables_length span').text("Number of items per page");
+                $datatable.find('.DataHeader .SearchInput .form-label').text("What is the name of the program you are looking for?");
+                $datatable.find('.DataHeader .SearchInput .form-control').attr("placeholder","Training program name");
+                $datatable.find('.DataHeader .CityLabel').text("Choose City");
+                $datatable.find('.DataHeader .MonthLabel').text("Choose Month");
+                $datatable.find('.DataHeader .GridTableSearch').text("Search");
+
+            }
             else
-                return "عدد العناصر في الصفحة";
+            {
+                $datatable.find('.dataTables_length span').text("عدد العناصر في الصفحة");
+                $datatable.find('.DataHeader .SearchInput .form-label').text("ماهو اسم البرنامج الذي تبحث عنه ؟");
+                $datatable.find('.DataHeader .SearchInput .form-control').attr("placeholder","اسم البرنامج التدريبي");
+                $datatable.find('.DataHeader .CityLabel').text("اختر المدينة");
+                $datatable.find('.DataHeader .MonthLabel').text("اختر الشهر");
+                $datatable.find('.DataHeader .GridTableSearch').text("بحث");
+
+
+            }
         }
         function getDraw(pagination = 1) {
             let draw = 1;
@@ -62,7 +79,7 @@
 
         function setZero() {
             $datatable.find('.dataTables_info').text(handleInfo(0, 0, 0));
-            $datatable.find('.dataTables_length span').text(handleSelectText());
+            handleSelectText();
             $datatable.find('.pagination').html(handlePagination(0, 0, 0, 0));
             $datatable.find('tbody').html('');
         }
@@ -112,7 +129,7 @@
                 if (res !== "") {
                     console.log(settings.lang)
                     $datatable.find('.dataTables_info').text(handleInfo(start + 1, length, res.iTotalRecords));
-                    $datatable.find('.dataTables_length span').text(handleSelectText());
+                    handleSelectText();
                     $datatable.find('.pagination').html(handlePagination(res.iTotalRecords, length, draw));
                     $datatable.find(".DataTable").find('tbody').html(generateRows(res.data));
                     $datatable.find('.DataGrid').html(generateCards(res.data)); // Assuming you have a container for cards

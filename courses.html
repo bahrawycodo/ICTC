@@ -111,7 +111,7 @@
                 <div class="col-12">
                     <div class="row DataHeader position-relative pt-3 mb-3">
                         <div class="col-lg-5 col-md-12">
-                            <div class="form-group">
+                            <div class="form-group SearchInput">
                                 <label class="form-label">ماهو اسم البرنامج الذي تبحث عنه ؟</label>
                                 <div class="input-group">
                                     <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="col-lg-2 col-md-6 mb-3">
                             <div class="form-group">
-                                <label class="form-label">اختر المدينة</label>
+                                <label class="form-label CityLabel">اختر المدينة</label>
                                 <div class="customSelect" id="City">
                                     <select>
                                         <option value="all">الكل</option>
@@ -135,7 +135,7 @@
                         </div>
                         <div class="col-lg-2 col-md-6 mb-3">
                             <div class="form-group">
-                                <label class="form-label">اختر الشهر</label>
+                                <label class="form-label MonthLabel">اختر الشهر</label>
                                 <div class="customSelect" id="Month">
                                     <select>
                                         <option value="all">الكل</option>
@@ -556,7 +556,7 @@
                     </div>
                     <div class="row DataFooter mt-3">
                         <div class="col-md-8 col-sm-12 d-flex align-items-center justify-content-md-start justify-content-center mb-3">
-                            <div class="dataTables_info me-3"></div>
+                            <div class="dataTables_info me-3">عدد العناصر في الصفحة</div>
                             <div class="dataTables_paginate paging_simple_numbers"><ul class="pagination">
                                 <li class="paginate_button page-item previous disabled">
                                     <a href="#" class="page-link" data-page="prev"><i class="fa-solid fa-angle-right"></i></a>
@@ -656,6 +656,8 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/CoursesDatatable.js"></script>
 <script>
+    var lang = document.documentElement.lang;
+
     $(".toggleGridTable").on("click",function (){
         $(this).children("i").toggleClass("fa-grid-2").toggleClass("fa-table");
         $(".DataContainer .DataTable").fadeToggle(100);
@@ -669,7 +671,7 @@
     $('#xop').customDataTable({
         afterLoad:reloadSameHeight,
         loadUrl: '/path/to/data',
-        lang:'en',
+        lang,
         rowTemplate: `
         <tr>
                                       <td>{{title}}</td>
