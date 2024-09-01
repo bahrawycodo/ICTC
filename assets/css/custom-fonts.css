@@ -14,3 +14,9 @@
     src: url("../fonts/MYRIADPRO-REGULAR.OTF");
     font-family: MyRiadpro;
 }
+:root{
+    --BoldFont:SansOneBold;
+    --BookFont:SansOneBook;
+    --UniversNextArabic:UniversNextArabic;
+    --MyRiadpro:MyRiadpro
+}

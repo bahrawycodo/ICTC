@@ -12,7 +12,7 @@ main{background: #F3F5F6}
     font-size: 1.6rem;
 }
 .section-title{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     line-height: unset;
     margin-bottom: 0;
 }
@@ -40,7 +40,7 @@ main{background: #F3F5F6}
     content: none;
 }
 .section-title-description{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.9rem;
     color: #464854;
     font-weight: 600;
@@ -55,13 +55,13 @@ main{background: #F3F5F6}
     --bs-btn-hover-color:#fff;
     --bs-btn-box-shadow:none;
     --bs-btn-focus-box-shadow:none;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
 }
 /* Start Top Nav */
 .top-nav{background: #1D2155;height: 40px}
 .top-nav .lang-flags .btn{padding: 0;}
 .top-nav .linksContainer .list-group-item{background: none;border: 0;padding: 0;}
-.top-nav .linksContainer .list-group-item a{direction: ltr;color: #C1D0DE;text-decoration: none;font-size: 14px;    font-family: 'UniversNextArabic';}
+.top-nav .linksContainer .list-group-item a{direction: ltr;color: #C1D0DE;text-decoration: none;font-size: 14px;    font-family: var(--UniversNextArabic);}
 .top-nav .linksContainer .list-group-item i{width: 24px;height: 24px;background: #39C0C0;color: #fff;border: 0.5px solid #C1D0DE;display: flex;justify-content: center;align-items: center;font-size: 13px}
 .top-nav .socialmedia .list-group-item{padding: 0;background: none;border: 0;color: #fff;border-radius: 0 !important;font-size: 13px}
 .top-nav .socialmedia .list-group-item.linkedin{background: #0A66C2}
@@ -78,7 +78,7 @@ main{background: #F3F5F6}
     --bs-nav-link-padding-y:0.313rem;
     /*--bs-navbar-nav-link-padding-x:0.313rem;*/
     color: #174C81;
-    font-family: 'UniversNextArabic';
+    font-family: var(--UniversNextArabic);
     font-size: 18px;
         transition: 0.3s ease-in-out;
 }
@@ -104,8 +104,9 @@ main{background: #F3F5F6}
 .navbar .search.input-group .input-group-text,.navbar .search.input-group .form-control{border-radius: 0 !important;background: #D8E7EF;border: 0}
 
 .navbar .search.input-group .input-group-text{position: relative}
-.navbar .search.input-group .input-group-text:after{content: "";position: absolute;width: 2px;height: 60%;top: 20%;left: 0;background: #6E707F}
-.navbar .search.input-group .form-control {font-size: 14px;color: #6E707F;box-shadow: none;height: 38px;}
+.navbar .search.input-group .input-group-text:after{content: "";position: absolute;width: 2px;height: 60%;top: 20%;left: auto;right: 0;background: #6E707F}
+[dir="rtl"] .navbar .search.input-group .input-group-text:after{left: 0;right: auto}
+.navbar .search.input-group .form-control {font-size: 14px;color: #6E707F;box-shadow: none;height: 38px;font-family: var(--BookFont);}
 .navbar .search.input-group .form-control::placeholder {color: #6E707F;font-size: 14px;}
 .navbar .search.input-group .form-control::-webkit-input-placeholder {color: #6E707F;font-size: 14px;}
 .navbar .search.input-group .form-control::-moz-placeholder {color: #6E707F;font-size: 14px;}
@@ -176,7 +177,7 @@ main{background: #F3F5F6}
     background-size:auto 100% ;
 }
 .top-footer h4{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     color: #0033A0;
     margin-bottom: 0;
 }
@@ -185,7 +186,7 @@ main{background: #F3F5F6}
     border-color: #C1D0DE;
     border-width: 2px;
     color: rgb(39, 15, 4);
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     color: #fff;
     --bs-btn-padding-x: 1.4rem;
     --bs-btn-line-height: 2;
@@ -194,7 +195,7 @@ main{background: #F3F5F6}
 .top-footer ul li{
     list-style-image: url("../images/contactus/listtype.svg");
     color: #270F04;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 1rem;
     line-height: 2rem;
 }
@@ -211,20 +212,21 @@ footer:after{
     mix-blend-mode: overlay;
 }
 footer .footer-widgets{border-bottom: 1px solid #fff}
-footer .footer-widgets .widget h3.title{color:#39C0C0;font-family: SansOneBold;}
+footer .footer-widgets .widget h3.title{color:#39C0C0;font-family: var(--BoldFont);}
 footer .footer-widgets .widget .logo img{height: 80px;max-width: 80%;}
-footer .footer-widgets .widget p,footer .footer-widgets .widget ul li a{color:#fff;font-family: SansOneBook;text-decoration: none}
+footer .footer-widgets .widget p,footer .footer-widgets .widget ul li a{color:#fff;font-family: var(--BookFont);text-decoration: none}
 footer .footer-widgets .widget p{width: 80%;font-size: 0.9rem;line-height: 1.6;}
-footer .footer-widgets .widget ul:not(.socialmedia) li.list-group-item{--bs-list-group-bg: transparent;--bs-list-group-border-width: 0;padding-right: 0;}
+footer .footer-widgets .widget ul:not(.socialmedia) li.list-group-item{--bs-list-group-bg: transparent;--bs-list-group-border-width: 0;padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);padding-left: 0;}
+[dir="rtl"] footer .footer-widgets .widget ul:not(.socialmedia) li.list-group-item{padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);padding-right: 0;}
 footer .footer-widgets .widget ul:not(.socialmedia) li.list-group-item span{color:#fff;}
 footer .footer-widgets .widget ul:not(.socialmedia) li.list-group-item i{color:#39C0C0;}
-footer .footer-widgets .widget ul:not(.socialmedia) li.list-group-item .title{font-size: 0.9rem;color:#39C0C0;font-family: SansOneBold;}
+footer .footer-widgets .widget ul:not(.socialmedia) li.list-group-item .title{font-size: 0.9rem;color:#39C0C0;font-family: var(--BoldFont);}
 footer .footer-widgets .widget .socialmedia .list-group-item{width:36px;height:36px;border-radius:50% !important;padding: 0;background: none;border: 3px solid #39C0C0;color: #fff;font-size: 14px;display: flex;justify-content: center;align-items: center}
 footer .footer-widgets .widget .socialmedia .list-group-item a{line-height: 0;height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;}
-footer .copyright{color:#fff  !important;font-family: SansOneBook;font-size: 0.9rem;text-align: center}
+footer .copyright{color:#fff  !important;font-family: var(--BookFont);font-size: 0.9rem;text-align: center}
 footer .copyright a{color:#fff;text-decoration: none;}
 footer .footer-bottom ul li:not(:last-child):after{content:"";position: absolute;height: 60%;width:1px;top:20%;left:0;background: #fff;}
-footer .footer-bottom ul li{font-family: SansOneBook;font-size: 0.9rem;}
+footer .footer-bottom ul li{font-family: var(--BookFont);font-size: 0.9rem;}
 footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 @media(min-width: 768px) and (max-width: 992px){
     footer .footer-widgets .widget h3.title{
@@ -276,13 +278,13 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 .slider .swiper-slide{background-size: cover;background-repeat: no-repeat }
 .slider .swiper-slide .slide-content .title{
     color: #39C0C0;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 2.9rem;
     line-height: 4rem;
 }
 .slider .swiper-slide .slide-content .description{
     color: #C0C0C0;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 1.2rem;
 }
 .slider .swiper-slide .slide-content .btn{
@@ -291,7 +293,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     border-color: #FFA200;
     border-width: 2px;
     color: #270F04;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     --bs-btn-padding-x: 1.4rem;
     --bs-btn-line-height: 2;
 }
@@ -312,9 +314,9 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     height: 40px;
 }
 .slider > .about .about-content .title h4{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
 }.slider > .about .about-content .content{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 14px;
     line-height: 1.8;
 }
@@ -398,7 +400,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     max-width: 100%;
 }
 .training-plan .TPlan h6{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     color: #282931;
 }
 /* End Training Plan */
@@ -420,7 +422,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .LProgram .card-footer a{
     color: #0033A0;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.8rem;
     text-decoration: none;
     line-height: 1.4rem;
@@ -428,7 +430,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 .LProgram .card-footer ul li span{
     font-size: 0.6rem;
     color: #7C7C7C;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     line-height: 0.6rem;
 }
 .LProgram .card-footer ul li.vertical-line {
@@ -462,7 +464,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .SProgram .card-footer a{
     color: #fff;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 1rem;
     text-decoration: none;
     line-height: 1.4rem;
@@ -474,7 +476,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 .SProgram .card-footer ul li span{
     font-size: 0.6rem;
     color: #D8E7EF;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     line-height: 0.6rem;
 }
 .SProgram .card-footer ul li.vertical-line {
@@ -504,7 +506,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .latest-news .card-footer a{
     color: #1D2155;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -517,7 +519,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     font-size: 0.6rem;
     color: #7C7C7C;
     font-weight: bold;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     line-height: 0.6rem;
 }
 .latest-news .card-footer ul li.two-dots::before {
@@ -547,7 +549,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     transition: 0.3s ease-in-out;
 }
 .client-opinions .COpinion p.MainText{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.9rem;
     line-height: 1.6rem;
     color: #1D2155;
@@ -578,12 +580,12 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .client-opinions .COpinion h6{
     color: #1D2155;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.7rem;
     font-weight: bold;
 }
 .client-opinions .COpinion .card-footer span{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.7rem;
     color: #464854;
     line-height: 1rem;
@@ -641,11 +643,11 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     text-align: center;
 }
 .OurNewsletter .right img{width: 80%}
-.OurNewsletter .left h3{color: #39C0C0;font-family: SansOneBold;}
+.OurNewsletter .left h3{color: #39C0C0;font-family: var(--BoldFont);}
 .OurNewsletter .left .form{width: 80%;margin: auto}
 .OurNewsletter .left p{
     color: #C0C0C0;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
 }
 .OurNewsletter .left .form input,.OurNewsletter .left .form .input-group-text{
@@ -654,7 +656,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     box-shadow: none;
 }
 .OurNewsletter .left .form .input-group-text{color: #1D2155;font-size: 1.2rem}
-.OurNewsletter .left .form input{color: #7C7C7C;font-family: SansOneBook;font-size: 0.8rem;height: 50px;padding-right: 0}
+.OurNewsletter .left .form input{color: #7C7C7C;font-family: var(--BookFont);font-size: 0.8rem;height: 50px;padding-right: 0}
 .OurNewsletter .left .form input::placeholder {
     color: #7C7C7C;  /* Placeholder text color */
     opacity: 1;   /* Ensures full opacity */
@@ -683,7 +685,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     border-color: #FFA200;
     border-width: 2px;
     color: #270F04;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     --bs-btn-padding-x: 1.4rem;
     --bs-btn-line-height: 2;
 }
@@ -700,7 +702,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 /* End Clients */
 
 /* Start Training Programs */
-.page-title{background: #39C0C0;color: #fff;font-family: SansOneBold;line-height: normal;font-size: 1.12rem;border-radius: 1rem 1rem 0 0 }
+.page-title{background: #39C0C0;color: #fff;font-family: var(--BoldFont);line-height: normal;font-size: 1.12rem;border-radius: 1rem 1rem 0 0 }
 .page .SProgram .card-body{height: 250px}
 .page .SProgram .card-footer a {font-size: 0.8rem;}
 .page .SProgram .card-footer ul li span{font-size: 0.5rem;}
@@ -715,7 +717,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     background-size: 100%;
 }
 .page.TrainingPlan .PageHeader ul{  display: grid;grid-template-columns: repeat(3, 1fr);align-items: center;text-align: center;}
-.page.TrainingPlan .PageHeader ul li{ background-size: 100% auto;background-repeat: no-repeat;background-position-y: 20%;list-style-type: none;color: #fff;font-family: SansOneBold;font-size: 1rem;background-color: #0033A0;background-blend-mode: overlay;}
+.page.TrainingPlan .PageHeader ul li{ background-size: 100% auto;background-repeat: no-repeat;background-position-y: 20%;list-style-type: none;color: #fff;font-family: var(--BoldFont);font-size: 1rem;background-color: #0033A0;background-blend-mode: overlay;}
 .page.TrainingPlan .PageHeader ul li:nth-child(2){color: #1544A8;background-color: #C7C9D3}
 .page.TrainingPlan .PageHeader ul li:nth-child(1){
     background-image: url("../images/Page-TrainingPlan/listElem1Background.png");
@@ -760,7 +762,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 .page.TrainingPlan .P-TPlan .card-footer h6{
     justify-self: center;
     color: #0033A0;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.8rem;
     margin-bottom: 0;
     line-height: normal;
@@ -789,7 +791,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 .page.courses .header h3{
     background: #39C0C0;
     color: #0033A0;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     position: absolute;
     font-size: 1.2rem;
     padding: 5px 15px;
@@ -800,7 +802,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     z-index: 1;
 }
 .page.courses .header p{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     color:#fff;
     font-size: 0.8rem;
     line-height: normal;
@@ -825,7 +827,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .page.courses .DataHeader .form-group .form-label{
     color:#244166;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.8rem;
 
 }
@@ -840,7 +842,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .page.courses .DataHeader .form-group .input-group .form-control{
     font-size: 0.8rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     line-height: 2;
     padding-right: 0;
 }
@@ -869,7 +871,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
         border: 1px solid #8E98A3;
         cursor: pointer;
         border-radius: 0.6rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
 }
 .page.courses .DataHeader .form-group .customSelect.open label{
     border-radius:  0.6rem 0.6rem 0 0;
@@ -894,7 +896,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     background: #E4E8F0;
     color:#8E98A3;
     font-size: 0.8rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
 }
 .page.courses .DataHeader .form-group .customSelect ul {
     width: 100%;
@@ -907,7 +909,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     list-style-type: none;
     color: #244166;
     padding: 10px;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     border-bottom: 1px solid #EBEBEB;
     cursor: pointer;
     font-size: 0.8rem;
@@ -938,7 +940,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     border-radius: 0.6rem;
     color: #fff;
     flex-grow: 1;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     font-weight: bold;
     line-height: 1.8;
@@ -959,7 +961,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 .page.courses .DataGrid .course .card-header img{transform: translate(50%, 0%);height: 100%;min-width: 100%}
 .page.courses .DataGrid .course .card-body .title{
     color: #244166;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     text-align: center;
     /*font-weight: bold;*/
     line-height: 1.6rem;
@@ -1003,7 +1005,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .page.courses .DataGrid .course .card-body .evaluation >span{
     color: #244166;
-    font-family: MyRiadpro;
+    font-family: var(--MyRiadpro);
 /*     font-weight: bold; */
     font-size: 1rem;
     display: block;
@@ -1015,7 +1017,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     color: #244166;
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
 }
 .page.courses .DataGrid .course .card-body .details li span{
     font-size: 0.6rem;
@@ -1034,7 +1036,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     justify-content: center;
     align-items: center;
     color: #39C0C0;
-    font-family: MyRiadpro;
+    font-family: var(--MyRiadpro);
     font-weight: bold;
     font-size: 1.2rem;
     max-width: calc(50% - 0.25rem);
@@ -1044,7 +1046,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     color: #fff;
     flex: 1;
     border-radius: 0.6rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     max-width: calc(50% - 0.25rem);
 }
@@ -1053,7 +1055,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     border-radius: 0.6rem;
     overflow: hidden;
     text-align: center;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     /*! font-weight: bold; */
     font-size: 0.7rem;
     vertical-align: middle;
@@ -1095,7 +1097,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     background: #0033A0;
     color: #fff;
     border-radius: 0.6rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     min-width: 90px
 }
@@ -1110,7 +1112,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 .page.courses .DataFooter .dataTables_info {
     color: #8E98A3;
     font-size: 0.8rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-weight: bold;
 }
  .page.courses .DataFooter .pagination{
@@ -1121,7 +1123,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
    color: #244166;
     background: none;
     border: none;
-    font-family: MyRiadpro;
+    font-family: var(--MyRiadpro);
     font-weight: bold;
     border-radius: 0.5rem;
    padding: 0;
@@ -1141,7 +1143,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .page.courses .DataFooter .dataTables_length{    color: #8E98A3;
     font-size: 0.8rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-weight: bold;
 }
 .page.courses .DataFooter .dataTables_length select{
@@ -1180,7 +1182,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 /* Start Program Details*/
 .ProgramHeader h3{
     color: #0033A0;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 1.2rem;
 }
 /* Start Slider Container */
@@ -1272,7 +1274,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     border-radius: 0.6rem;
     border-color: #707070;
 }
-.ProgramDetailsSubHeader h4{position: relative;padding-right: 15px;color: #39C0C0;font-family: SansOneBold;font-size: 1rem;margin-bottom: 0}
+.ProgramDetailsSubHeader h4{position: relative;padding-right: 15px;color: #39C0C0;font-family: var(--BoldFont);font-size: 1rem;margin-bottom: 0}
 .ProgramDetailsSubHeader h4:before{
     content: "";
     position: absolute;
@@ -1287,7 +1289,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 }
 .ProgramHeader .ProgramDetailsSubHeader p{
     font-size: 0.8rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     color: #174C81;
     line-height: 1.4rem;
 }
@@ -1301,7 +1303,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     margin-left: 50px;
     filter: url(#goo) drop-shadow( 1px 0px 0px #5F65941A) drop-shadow(-1px 0px 0px #5F65941A) drop-shadow( 0px 1px 0px #5F65941A) drop-shadow( 0px -1px 0px #5F65941A);
     padding-bottom: 30px;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.7rem;
     color: #8C8AAB;
     display: flex;
@@ -1368,7 +1370,7 @@ mask-position: center;
     border: 0;
     background: #0033A0;
     color: #fff;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     padding: 10px 0;
     min-width: 150px;
@@ -1418,7 +1420,7 @@ border: 0;
 }
 .ProgramBody .tabs .tab-content .tab-pane .group:last-child:after{content: none}
 .ProgramBody .tabs .tab-content .tab-pane h4,.ProgramBody .tabs .tab-content .tab-pane h5{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.8rem;
     color: #0033A0;
 }
@@ -1429,9 +1431,9 @@ border: 0;
     margin-bottom: 0;
 }
 .ProgramBody .tabs .tab-content .tab-pane p{
-    font-family: SansOneBook;font-size: 0.8rem;color: #174C81;line-height: normal;
+    font-family: var(--BookFont);font-size: 0.8rem;color: #174C81;line-height: normal;
 }
-.ProgramBody .tabs .tab-content .tab-pane .group ul li{position:relative;list-style-type: none;font-family: SansOneBook;font-size: 0.8rem;color: #174C81;flex: 0 0 calc(50% - 1.5rem);line-height: normal;}
+.ProgramBody .tabs .tab-content .tab-pane .group ul li{position:relative;list-style-type: none;font-family: var(--BookFont);font-size: 0.8rem;color: #174C81;flex: 0 0 calc(50% - 1.5rem);line-height: normal;}
 .ProgramBody .tabs .tab-content .tab-pane .group ul li:before{
     content: "";
     width: 5px;
@@ -1473,7 +1475,7 @@ border: 0;
     --bs-card-border-radius: 0.8rem;
 }
 .ProgramRegister .SideBar h6,.ProgramPay .PayContainer h6{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     color:#313131;
     position: relative;
@@ -1492,14 +1494,14 @@ border: 0;
     bottom: -10px;
     right: 0;
 }
-.ProgramRegister .SideBar .courseTitle,.ProgramRegister .SideBar .price,.ProgramPay .PayContainer .courseTitle,.ProgramPay .PayContainer .price{font-family: SansOneBold;font-size: 0.8rem;margin-bottom:0.8rem}
+.ProgramRegister .SideBar .courseTitle,.ProgramRegister .SideBar .price,.ProgramPay .PayContainer .courseTitle,.ProgramPay .PayContainer .price{font-family: var(--BoldFont);font-size: 0.8rem;margin-bottom:0.8rem}
 .ProgramRegister .SideBar .courseTitle,.ProgramPay .PayContainer .courseTitle{color:#323232}
 .ProgramRegister .SideBar .price,.ProgramPay .PayContainer .price{color: #0033A0}
-.ProgramRegister .SideBar p,.ProgramPay .PayContainer p{color: #676666;font-size:0.7rem;font-family: SansOneBook;}
+.ProgramRegister .SideBar p,.ProgramPay .PayContainer p{color: #676666;font-size:0.7rem;font-family: var(--BookFont);}
 .ProgramRegister .SideBar .card-body ul li,.ProgramPay .PayContainer .card-body ul li{
     list-style-type: none;
     color: #676666;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     position: relative;
     font-size: 0.7rem;
     display: flex;
@@ -1515,7 +1517,7 @@ border: 0;
     color: #39c0c0;
     font-weight: 900;
 }
-.ProgramRegister .SideBar .card-body .TaxRegistrationTitle,.ProgramPay .PayContainer .card-footer .TaxRegistrationTitle{    color: #676666;font-family: SansOneBook;  font-size: 0.7rem;position: relative;display: flex;}
+.ProgramRegister .SideBar .card-body .TaxRegistrationTitle,.ProgramPay .PayContainer .card-footer .TaxRegistrationTitle{    color: #676666;font-family: var(--BookFont);  font-size: 0.7rem;position: relative;display: flex;}
 .ProgramRegister .SideBar .card-body .TaxRegistrationTitle:before,.ProgramPay .PayContainer .card-footer .TaxRegistrationTitle:before{
     content: "";
     -webkit-mask-image: url('data:image/svg+xml,%3Csvg id="Vector_Smart_Object" data-name="Vector Smart Object" xmlns="http://www.w3.org/2000/svg" width="16.138" height="16.138" viewBox="0 0 16.138 16.138"%3E%3Cg id="Group_94" data-name="Group 94"%3E%3Cpath id="Path_94" data-name="Path 94" d="M0,13.743V6.43a.6.6,0,0,1,.635-.351c.493.016.987,0,1.481.008.151,0,.189-.034.189-.187C2.3,4.261,2.3,2.623,2.3.984A.939.939,0,0,1,3.033.026.377.377,0,0,0,3.089,0h7.376a1.726,1.726,0,0,1,.251.181q1.461,1.481,2.928,2.956a.633.633,0,0,1,.2.478c-.005.777,0,1.555,0,2.332,0,.111.03.14.14.139.509-.006,1.019.009,1.529-.007a.6.6,0,0,1,.635.351v7.313a.6.6,0,0,1-.635.351c-.509-.015-1.019,0-1.528-.007-.108,0-.144.025-.141.138.008.325.005.651,0,.977a.936.936,0,0,1-.327.707,1.277,1.277,0,0,1-.459.23H3.089a.209.209,0,0,0-.041-.023.943.943,0,0,1-.747-.993c0-.3-.005-.6,0-.9,0-.113-.032-.139-.141-.138-.509.006-1.019-.009-1.528.007A.6.6,0,0,1,0,13.743m8.065-.6q3.474,0,6.949,0c.138,0,.183-.028.182-.177q-.008-2.883,0-5.767c0-.148-.043-.177-.182-.177q-6.949.005-13.9,0c-.133,0-.175.025-.175.169q.009,2.891,0,5.783c0,.144.041.169.174.169q3.474-.006,6.949,0m0-7.06c1.554,0,3.109,0,4.663,0,.144,0,.171-.041.169-.175q-.011-.882,0-1.764c0-.117-.028-.149-.147-.148-.777.006-1.554,0-2.331,0a.487.487,0,0,1-.55-.552c0-.782,0-1.565,0-2.347C9.87.969,9.831.942,9.7.943Q6.56.949,3.418.943c-.133,0-.175.024-.175.169q.009,2.4,0,4.8c0,.141.036.171.173.171,1.549-.005,3.1,0,4.647,0m0,9.109H9.795c.982,0,1.964,0,2.946,0,.127,0,.158-.037.153-.158-.009-.257-.011-.515,0-.772.007-.143-.034-.181-.179-.18q-4.372.007-8.744,0c-.2,0-.4.006-.6,0-.106,0-.132.033-.129.133.006.268.01.536,0,.8-.006.138.031.173.171.173,1.549-.006,3.1,0,4.648,0M12.14,3.057,10.811,1.728c0,.391,0,.816,0,1.24,0,.069.023.091.091.09.425,0,.849,0,1.239,0" fill="%2339c0c0"/%3E%3Cpath id="Path_95" data-name="Path 95" d="M8.032,7.849a.568.568,0,0,1,.577.406q.456,1.207.908,2.414c.122.324.245.647.364.972A.475.475,0,1,1,9,11.973c-.052-.131-.068-.317-.165-.38s-.284-.025-.43-.026c-.331,0-.662,0-.993,0a.137.137,0,0,0-.158.111,3.536,3.536,0,0,1-.133.353.467.467,0,0,1-.6.264.462.462,0,0,1-.278-.6Q6.894,9.945,7.559,8.2a.526.526,0,0,1,.473-.354M8.09,9.56l-.036,0-.395,1.047h.826L8.09,9.56" fill="%2339c0c0"/%3E%3Cpath id="Path_96" data-name="Path 96" d="M13.385,12.325a.5.5,0,0,1-.424-.225c-.255-.36-.516-.716-.766-1.078-.074-.107-.11-.1-.183,0-.257.371-.521.737-.787,1.1a.446.446,0,0,1-.484.186.457.457,0,0,1-.359-.358.5.5,0,0,1,.11-.426c.316-.439.626-.882.946-1.318a.173.173,0,0,0,0-.245Q10.95,9.3,10.476,8.62a.471.471,0,0,1,.265-.758.463.463,0,0,1,.5.21c.257.358.516.715.767,1.078.073.105.109.107.183,0,.257-.371.521-.737.786-1.1a.447.447,0,0,1,.469-.189.452.452,0,0,1,.373.361.5.5,0,0,1-.109.427c-.315.439-.626.882-.946,1.318a.173.173,0,0,0,0,.245q.488.667.962,1.345a.473.473,0,0,1-.251.754.934.934,0,0,1-.1.017" fill="%2339c0c0"/%3E%3Cpath id="Path_97" data-name="Path 97" d="M4.507,10.385q0,.7,0,1.4a.476.476,0,1,1-.945,0c0-.95,0-1.9,0-2.851,0-.114-.023-.156-.145-.15-.209.011-.42.006-.63,0a.472.472,0,1,1,0-.944q1.244,0,2.488,0a.473.473,0,1,1-.008.944c-.2,0-.41.007-.614,0-.114-.005-.152.022-.15.145.008.483,0,.966,0,1.449" fill="%2339c0c0"/%3E%3Cpath id="Path_98" data-name="Path 98" d="M5.913,2.994c-.357,0-.713,0-1.07,0a.475.475,0,1,1,0-.945q1.085,0,2.171,0a.474.474,0,1,1,0,.945c-.367,0-.734,0-1.1,0" fill="%2339c0c0"/%3E%3Cpath id="Path_99" data-name="Path 99" d="M5.937,5.012c-.367,0-.734,0-1.1,0a.474.474,0,1,1,0-.945q1.093,0,2.186,0a.474.474,0,1,1,0,.945c-.362,0-.724,0-1.085,0" fill="%2339c0c0"/%3E%3C/g%3E%3C/svg%3E');
@@ -1533,13 +1535,13 @@ position: relative;
 margin-left: 5px;
 }
 .ProgramRegister .SideBar .card-body .TaxRegistrationNumber,.ProgramPay .PayContainer .card-footer .TaxRegistrationNumber{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.7rem;
     color: #676666;
 }
 .ProgramRegister .SideBar .card-body .DiscountPlan,.ProgramPay .PayContainer .card-footer .DiscountPlan{
     color: #0033A0;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.5rem;
     position: relative;
     padding: 0;
@@ -1554,7 +1556,7 @@ margin-left: 5px;
     margin-right: 5px;
 }
 .ProgramRegister .SideBar .buttons .btn,.ProgramPay .buttons .btn{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.8rem;
     padding: 0.7rem;
     border-radius: 0.7rem;
@@ -1608,7 +1610,7 @@ margin-left: 5px;
     border: 2px solid #8E98A3;
     cursor: pointer;
     border-radius: 0.5rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
 }
 .ProgramRegister .formRegister .customSelect.open label{
     border-radius:  0.6rem 0.6rem 0 0;
@@ -1635,7 +1637,7 @@ margin-left: 5px;
     background: #E4E8F0;
     color:#8E98A3;
     font-size: 0.8rem;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
 }
 .ProgramRegister .formRegister .customSelect ul {
     width: 100%;
@@ -1648,7 +1650,7 @@ margin-left: 5px;
     list-style-type: none;
     color: #244166;
     padding: 10px;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     border-bottom: 1px solid #EBEBEB;
     cursor: pointer;
     font-size: 0.8rem;
@@ -1666,7 +1668,7 @@ margin-left: 5px;
 .ProgramRegister .formRegister .customSelect#CourseType .listContainer ul li:first-child{border-top: 0}
 .ProgramRegister .formRegister .form-label{
     color: #8C99AF;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     margin-bottom: 0.2rem;
 }
@@ -1679,7 +1681,7 @@ margin-left: 5px;
 .ProgramRegister .formRegister .table thead tr th,.ProgramRegister .formRegister .table tbody tr td{
     border-bottom: 2px solid #8C99AF;
     border-left: 2px solid #8C99AF;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     font-weight: normal;
     text-align: center;
@@ -1754,7 +1756,7 @@ margin-left: 5px;
     background: #8C99AF;
     display: inline-block;
 }
-.ProgramRegister .formRegister .input-group .form-control{border-right: none;box-shadow: none !important;padding-right: 0;color: #8C99AF;font-family: SansOneBook;font-size: 0.8rem}
+.ProgramRegister .formRegister .input-group .form-control{border-right: none;box-shadow: none !important;padding-right: 0;color: #8C99AF;font-family: var(--BookFont);font-size: 0.8rem}
 .ProgramRegister .formRegister .input-group .form-control::placeholder {color: #8C99AF;}
 .ProgramRegister .formRegister .input-group .form-control::-webkit-input-placeholder {color: #8C99AF;}
 .ProgramRegister .formRegister .input-group .form-control::-moz-placeholder {color: #8C99AF;}
@@ -1789,11 +1791,11 @@ margin-left: 5px;
 }
 .ProgramPay .PayContainer .card-footer .right span{
     color: #676666;
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.7rem;
 }
 .ProgramPay .PayContainer .card-footer .right span.date{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     color: #39C0C0;
     font-size: 0.9rem;
 }
@@ -1822,7 +1824,7 @@ margin-left: 5px;
     background-position-y: bottom;
 }
 .sign .left h3{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 1rem;
     color: #fff;
     background: #0033A0;
@@ -1837,7 +1839,7 @@ margin-left: 5px;
 .sign .left .input-group.error {--bs-border-color:#F70000;--bs-focus-border-color:#F70000;color: #F70000;}
 .sign .left .input-group .input-group-text{background: #fff;border-radius: 0 !important;border:0;background:transparent;padding-right: 20px;color:#0033A0}
 .sign .left .input-group .input-group-text:last-child{cursor: pointer}
-.sign .left .input-group .form-control{border: 0;box-shadow: none ;outline: none;border-radius: 0 !important;background:transparent;color: #8C99AF;padding-top: 10px;padding-bottom: 10px;font-family: SansOneBook;font-size: 0.8rem;}
+.sign .left .input-group .form-control{border: 0;box-shadow: none ;outline: none;border-radius: 0 !important;background:transparent;color: #8C99AF;padding-top: 10px;padding-bottom: 10px;font-family: var(--BookFont);font-size: 0.8rem;}
 .sign .left .input-group .form-control::placeholder {color: #8C99AF;}
 .sign .left .input-group .form-control::-webkit-input-placeholder {color: #8C99AF;}
 .sign .left .input-group .form-control::-moz-placeholder {color: #8C99AF;}
@@ -1846,7 +1848,7 @@ margin-left: 5px;
 .sign .left .input-group.error .form-control{color:#F70000 }
 .sign .left .btn{
     width:calc(50% - .5rem) ;
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.7rem;
     padding: 0.7rem;
     border-radius: 2rem;
@@ -1854,7 +1856,7 @@ margin-left: 5px;
     max-width: 140px;
 }
 .sign .left .PasswordStrength span{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     color: #0033A0;
 }
@@ -1883,12 +1885,12 @@ margin-left: 5px;
     --bs-btn-hover-color: #424854;
 }
 .sign .left .haveAccount span{
-    font-family: SansOneBook;
+    font-family: var(--BookFont);
     font-size: 0.8rem;
     color: #0033A0;
 }
     .sign .left .haveAccount .btn{
-    font-family: SansOneBold;
+    font-family: var(--BoldFont);
     font-size: 0.8rem;
     color: #39C0C0;
     padding: 0;
