@@ -4,6 +4,7 @@
         var settings = $.extend({
             afterLoad:function (){},
             loadUrl: '', // URL to load data
+            lang:'ar',
             rowTemplate: '', // Template string without foreach loop
             cardTemplate: '' // Template for generating HTML card structures
         }, options);
@@ -33,11 +34,20 @@
 
         function handleInfo(start, length, total) {
             start = total === 0 ? 0 : start;
-            let end = start + length - 1;
+            let end = total== 0 ?0:start + length - 1;
             end = total < end ? total : end;
-            return ` عرض نتائج ${start}-${end} من ${total}`;
-        }
+            if(settings.lang =='en')
+                return ` Show Results ${start} - ${end} From ${total}`;
+            else
+                return ` عرض نتائج ${start} - ${end} من ${total}`;
 
+        }
+        function  handleSelectText(){
+            if(settings.lang =='en')
+                return "Number of items per page";
+            else
+                return "عدد العناصر في الصفحة";
+        }
         function getDraw(pagination = 1) {
             let draw = 1;
             if (pagination === 'prev') {
@@ -52,6 +62,7 @@
 
         function setZero() {
             $datatable.find('.dataTables_info').text(handleInfo(0, 0, 0));
+            $datatable.find('.dataTables_length span').text(handleSelectText());
             $datatable.find('.pagination').html(handlePagination(0, 0, 0, 0));
             $datatable.find('tbody').html('');
         }
@@ -99,7 +110,9 @@
             $.post(settings.loadUrl, { 'mdl': { "search[value]": search, length, draw, start } }, function (res) {
                 $datatable.find('.loading').fadeOut(1);
                 if (res !== "") {
+                    console.log(settings.lang)
                     $datatable.find('.dataTables_info').text(handleInfo(start + 1, length, res.iTotalRecords));
+                    $datatable.find('.dataTables_length span').text(handleSelectText());
                     $datatable.find('.pagination').html(handlePagination(res.iTotalRecords, length, draw));
                     $datatable.find(".DataTable").find('tbody').html(generateRows(res.data));
                     $datatable.find('.DataGrid').html(generateCards(res.data)); // Assuming you have a container for cards
