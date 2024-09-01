@@ -1162,9 +1162,19 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     display: none;
 }
 @media (max-width: 767.5px) {
-    .page.courses .header::after {content: none}
-    .page.courses .DataFooter>div{flex-direction: column;gap: 1rem;}
-    .page.courses .DataFooter .dataTables_length label{justify-content: center}
+    .page.courses .header::after {
+        content: none
+    }
+
+    .page.courses .DataFooter > div {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .page.courses .DataFooter .dataTables_length label {
+        justify-content: center
+    }
+}
 /* End Courses */
 
 /* Start Program Details*/
@@ -1876,7 +1886,8 @@ margin-left: 5px;
     font-family: SansOneBook;
     font-size: 0.8rem;
     color: #0033A0;
-}.sign .left .haveAccount .btn{
+}
+    .sign .left .haveAccount .btn{
     font-family: SansOneBold;
     font-size: 0.8rem;
     color: #39C0C0;
@@ -1885,7 +1896,9 @@ margin-left: 5px;
 }
  .sign .left .form-group{max-width: 300px;margin: auto;}
 @media (max-width: 768px) {
-    .sign .left{  min-height: auto;}
+    .sign .left {
+        min-height: auto;
+    }
 }
 
 /* End Sign Page */
