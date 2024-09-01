@@ -656,8 +656,8 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/CoursesDatatable.js"></script>
 <script>
-    var lang = document.documentElement.lang;
-
+    var {lang} = document.documentElement;
+console.log(lang)
     $(".toggleGridTable").on("click",function (){
         $(this).children("i").toggleClass("fa-grid-2").toggleClass("fa-table");
         $(".DataContainer .DataTable").fadeToggle(100);
