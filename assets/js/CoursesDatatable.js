@@ -13,10 +13,10 @@
             let html = '';
             let pages = Math.ceil(total / length);
             let previousLink = `<li class="paginate_button page-item previous ${current === 1 ? 'disabled' : ''}">
-                                    <a href="#" class="page-link" data-page="prev"><i class="fa-solid fa-angle-right"></i></a>
+                                    <a href="#" class="page-link" data-page="prev"><i class="fa-solid fa-angle-${settings.lang=='rtl' ?'right' :'left'}"></i></a>
                                 </li>`;
             let nextLink = `<li class="paginate_button page-item next ${current === pages ? 'disabled' : ''}">
-                                <a href="#" class="page-link" data-page="next"><i class="fa-solid fa-angle-left"></i></a>
+                                <a href="#" class="page-link" data-page="next"><i class="fa-solid fa-angle-${settings.lang=='rtl' ?'left' :'right'}"></i></a>
                             </li>`;
 
             html += previousLink;

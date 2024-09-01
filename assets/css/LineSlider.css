@@ -16,11 +16,15 @@ ul.lineSlider li.step::after {
     content: '';
     position: absolute;
     top: calc(10px - 1.5px);
-    left: calc(50% + 20px);
+    right: calc(50% + 20px);
     width: calc(100% - 40px); /* To ensure it reaches the next point */
     height: 3px;
     background-color: #C8CBD4;
     z-index: 1;
+}
+[dir="rtl"] ul.lineSlider li.step::after{
+    left: calc(50% + 20px);  
+    right: auto
 }
 ul.lineSlider li.step:first-child:after{
     content: none

@@ -50,7 +50,7 @@
                 $selectElement.append($listContainer);
             }
             function generateSearch() {
-                return `<input type="text" class="search form-control" placeholder="بحث">`
+                return `<input type="text" class="search form-control" placeholder="${document.documentElement.lang == 'rtl' ? 'بحث':'Search'}">`
             }
 
             function generateList() {
