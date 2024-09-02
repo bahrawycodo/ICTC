@@ -1803,7 +1803,7 @@ margin-right: 5px;
 .ProgramRegister .formRegister .table tbody tr:last-child td{
     border-bottom: none;
 }
- .ProgramRegister .formRegister .table .TableCheck input[type="checkbox"] {
+ .ProgramRegister .formRegister .table .TableCheck input[type="checkbox"], .ProgramRegister .formRegister .table .TableCheck input[type="radio"] {
      position: absolute;
      opacity: 0;
      cursor: pointer;
@@ -1834,11 +1834,11 @@ margin-right: 5px;
     transform: rotate(45deg);
 }
 
-.ProgramRegister .formRegister .table .TableCheck input[type="checkbox"]:checked ~ .checkmark {
+.ProgramRegister .formRegister .table .TableCheck input[type="checkbox"]:checked ~ .checkmark,.ProgramRegister .formRegister .table .TableCheck input[type="radio"]:checked ~ .checkmark {
     border-color: #39c0c0;
 }
 
-.ProgramRegister .formRegister .table .TableCheck input[type="checkbox"]:checked ~ .checkmark::after {
+.ProgramRegister .formRegister .table .TableCheck input[type="checkbox"]:checked ~ .checkmark::after,.ProgramRegister .formRegister .table .TableCheck input[type="radio"]:checked ~ .checkmark::after {
     display: block;
 }
 .ProgramRegister .formRegister .table .TableCheck .checkmark:hover {
