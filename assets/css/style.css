@@ -775,9 +775,12 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     height: 180px;
 }
 .page.TrainingPlan .P-TPlan img{
-    transform: translate(50%, 0%);
+    transform: translate(-50%, 0%);
     height: 100%;
     min-width: 100%;
+}
+[dir="rtl"] .page.TrainingPlan .P-TPlan img{
+    transform: translate(50%, 0%);
 }
 .page.TrainingPlan .P-TPlan .card-footer{
     grid-template-columns: 4fr 1fr;
@@ -795,6 +798,11 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     border-radius: 0;
     justify-self: end;
     text-decoration: none;
+    transform: rotateY(180deg)
+}
+[dir="rtl"] .page.TrainingPlan .P-TPlan .card-footer a{
+        transform: none
+
 }
 .page.TrainingPlan .P-TPlan .card-footer h6{
     justify-self: center;
