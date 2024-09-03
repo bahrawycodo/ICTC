@@ -14,7 +14,21 @@
     src: url("../fonts/MYRIADPRO-REGULAR.OTF");
     font-family: MyRiadpro;
 }
+@font-face {
+    src: url("../fonts/En/Stolzl-Bold.ttf");
+    font-family: StolzlBold;
+}
+@font-face {
+    src: url("../fonts/En/Stolzl-Light.ttf");
+    font-family: StolzlBook;
+}
 :root{
+    --BoldFont:StolzlBold;
+    --BookFont:StolzlBook;
+    --UniversNextArabic:UniversNextArabic;
+    --MyRiadpro:MyRiadpro
+}
+[dir="rtl"] :root{
     --BoldFont:SansOneBold;
     --BookFont:SansOneBook;
     --UniversNextArabic:UniversNextArabic;

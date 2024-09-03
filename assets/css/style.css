@@ -121,6 +121,7 @@ main{background: #F3F5F6}
     color: #6E707F;
     font-size: 14px;
 }
+.navbar .left .lang span{font-family:var(--UniversNextArabic) ;}
 .navbar-nav .nav-item .nav-link{margin-left: 2px}
 .navbar-nav .nav-item:last-child .nav-link{margin-left: 0}
 @media(max-width: 1400px) and (min-width: 991px){
