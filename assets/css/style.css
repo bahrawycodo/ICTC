@@ -419,6 +419,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 /* End Slider */
 
 /* Start Training Plan */
+.training-plan .TPlan{text-decoration: none}
 .training-plan .TPlan img{
     height: 70px;
     width: auto;

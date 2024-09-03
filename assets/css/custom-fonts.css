@@ -28,7 +28,7 @@
     --UniversNextArabic:UniversNextArabic;
     --MyRiadpro:MyRiadpro
 }
-[dir="rtl"] :root{
+[dir="rtl"] body{
     --BoldFont:SansOneBold;
     --BookFont:SansOneBook;
     --UniversNextArabic:UniversNextArabic;
