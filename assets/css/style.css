@@ -2007,6 +2007,27 @@ margin-right: 5px;
     color: #39C0C0;
     padding: 0;
     width: auto;
+        border-radius: 0;position: relative
+}
+.sign .left .haveAccount .btn:first-child:not(:last-child){
+    color: #0033A0;
+    padding-right: 10px
+}
+[dir="rtl"] .sign .left .haveAccount .btn:first-child:not(:last-child){
+    padding-left: 10px;
+    padding-right: 0
+}
+.sign .left .haveAccount .btn:first-child:not(:last-child):after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1.5px;
+    height:15px;
+    background: #0033A0
+}
+[dir="rtl"] .sign .left .haveAccount .btn:first-child:not(:last-child):after{
+    left: 0;
+    right: auto
 }
  .sign .left .form-group{max-width: 300px;margin: auto;}
 @media (max-width: 768px) {
