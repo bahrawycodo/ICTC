@@ -1,6 +1,7 @@
 @import "custom-fonts.css";
 /* General */
 .clearfix{clear: both}
+.ltr{direction: ltr}
 .text-align-justify{text-align:justify}
 .ImgWhite{filter: brightness(0) invert(1);}
 .bottom-25{bottom: 25%}
@@ -2061,4 +2062,111 @@ margin-right: 5px;
 }
 .page.ContactUs .PageHeader ul li h6 .Title{color: #39C0C0;}
 .page.ContactUs .PageHeader ul li h6 span:not(.Title),.page.ContactUs .PageHeader ul li h6 a{font-family: var(--BookFont);color: #fff;text-decoration: none}
+.PageHeader.WithBackground{height: 350px;position: relative;display: flex;align-items: center;justify-content: center;text-align:center}
+.PageHeader.WithOverlay:after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    bottom:0;
+    right:0;
+    left: 0;
+}
+.PageHeader.WithBackground:before{
+    content:"";
+    position: absolute;
+     height: 100%;
+     width: 100%;
+     background: url("../images/Page-TrainingPlan/HeaderBackground.png") no-repeat;
+     background-size: auto;
+     background-size: 100%;
+    top: 0;
+    bottom:0;
+    right:0;
+    left: 0;
+
+}
+.PageHeader.WithBackground > div{position: relative;z-index: 1}
+.PageHeader.WithBackground .PageTitle{font-family: var(--BoldFont);color: #fff;font-size: 1.4rem;}
+.PageHeader.WithBackground .breadcrumb-item,.PageHeader.WithBackground .breadcrumb-item a{color: #39C0C0;font-family: var(--BookFont);text-decoration: none;--bs-breadcrumb-divider-color: #39C0C0;font-size: 0.8rem;}
+[dir="rtl"] .PageHeader.WithBackground  .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+      padding-right: 0;
+}
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item {
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+      padding-left: 0;
+}
+.page.ContactUs .MapContainer{
+    width: 100%;
+    height: 450px;
+}
+.page.ContactUs .MapContainer iframe{
+    width: 100%;
+    height: 100%;
+}
+.page.ContactUs .ContactInfos,.page.ContactUs .ContactForm{max-width: 1000px}
+.page.ContactUs .ContactInfos{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.page.ContactUs .ContactInfos .card{
+    position: relative;
+    border-radius: 0.8rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0;
+--bs-card-spacer-y:1.5rem;
+--bs-card-spacer-x:3rem;
+}
+.page.ContactUs .ContactInfos .card i{
+    position: absolute;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    background: #0033A0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    top:-15px;
+    left: -10px;
+}
+[dir="rtl"] .page.ContactUs .ContactInfos .card i{right: -10px;left: auto}
+.page.ContactUs .ContactInfos .card h6{font-family: var(--BoldFont);font-size: 0.9rem;color: #000}
+.page.ContactUs .ContactInfos .card ul li,.page.ContactUs .ContactInfos .card ul li a{list-style-type: none;color: #8C8AAB;font-family: var(--BookFont);text-decoration: none;font-size: 0.8rem;}
+[dir="rtl"] .page.ContactUs .ContactInfos .card ul li{text-align: right}
+.page.ContactUs .ContactForm {padding-bottom:50px}
+.page.ContactUs .ContactForm .FormTitle{font-family: var(--BoldFont);font-size: 1rem;color: #000;margin-bottom:15px}
+.page.ContactUs .form-control{
+    border: 1px solid #e6e6e6;
+    box-shadow: none;
+    outline: none;
+    border-radius:  1.3rem;
+    background: #fff;
+    color: #676666;
+    font-family: var(--BookFont);
+    font-size: 0.8rem;
+    padding: 10px 25px 10px 25px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.page.ContactUs textarea.form-control{height: 150px}
+.page.ContactUs .btn.primary{
+    width: 150px;
+    font-family: var(--BoldFont);
+    font-size: 0.7rem;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    --bs-border-width: 2px;
+    --bs-btn-bg: #0033A0;
+    --bs-btn-hover-bg: #0033A0;
+    --bs-btn-border-color: #0033A0;
+    --bs-btn-hover-border-color: #0033A0;
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+}
 /* End Contact Page */
