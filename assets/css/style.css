@@ -749,15 +749,15 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 /* End Training Programs */
 
 /* Start Training Plan */
-.page.TrainingPlan .PageHeader .background{
+.page.TrainingPlan .PageHeader .background,.page.ContactUs .PageHeader .background{
     height: 350px;
     width: 100%;
     background: url("../images/Page-TrainingPlan/HeaderBackground.png") no-repeat;
     background-size: 100%;
 }
-.page.TrainingPlan .PageHeader ul{  display: grid;grid-template-columns: repeat(3, 1fr);align-items: center;text-align: center;}
-.page.TrainingPlan .PageHeader ul li{ background-size: 100% auto;background-repeat: no-repeat;background-position-y: 20%;list-style-type: none;color: #fff;font-family: var(--BoldFont);font-size: 1rem;background-color: #0033A0;background-blend-mode: overlay;}
-.page.TrainingPlan .PageHeader ul li:nth-child(2){color: #1544A8;background-color: #C7C9D3}
+.page.TrainingPlan .PageHeader ul,.page.ContactUs .PageHeader ul{  display: grid;grid-template-columns: repeat(3, 1fr);align-items: center;text-align: center;}
+.page.TrainingPlan .PageHeader ul li,.page.ContactUs .PageHeader ul li{ background-size: 100% auto;background-repeat: no-repeat;background-position-y: 20%;list-style-type: none;color: #fff;font-family: var(--BoldFont);font-size: 1rem;background-color: #0033A0;background-blend-mode: overlay;}
+.page.TrainingPlan .PageHeader ul li:nth-child(2),.page.ContactUs .PageHeader ul li:nth-child(2){color: #1544A8;background-color: #C7C9D3}
 .page.TrainingPlan .PageHeader ul li:nth-child(1){
     background-image: url("../images/Page-TrainingPlan/listElem1Background.png");
 }
@@ -1848,10 +1848,7 @@ margin-right: 5px;
 }
 .ProgramRegister .formRegister .input-group{border: 2px solid #8C99AF;border-radius: 0.5rem;}
 .ProgramRegister .formRegister .input-group .input-group-text{color: #6C7584;background: transparent;position:relative;margin-left: 0;padding-right: 0;border: none;box-shadow: none;}
-[dir="rtl"]{
-    padding: .375rem .75rem;
-    padding-left: 0;
-}
+
 .ProgramRegister .formRegister .input-group .input-group-text:after{    position: relative;
     content: "";
     width: 1.6px;
@@ -2037,3 +2034,31 @@ margin-right: 5px;
 }
 
 /* End Sign Page */
+
+/* Start Contact Page */
+.page.ContactUs .PageHeader ul li{display: flex;justify-content: center;gap: 1rem;align-items: center;}
+.page.ContactUs .PageHeader ul li i{
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+    border: 2px solid #39C0C0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.1);
+    color: #fff;
+    background: #39C0C0;
+}
+.page.ContactUs .PageHeader ul li h6 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    justify-content: right;
+    text-align: right;
+    gap: 0.5rem;
+}
+.page.ContactUs .PageHeader ul li h6 .Title{color: #39C0C0;}
+.page.ContactUs .PageHeader ul li h6 span:not(.Title),.page.ContactUs .PageHeader ul li h6 a{font-family: var(--BookFont);color: #fff;text-decoration: none}
+/* End Contact Page */
