@@ -2261,3 +2261,36 @@ margin-right: 5px;
 }
 
 /* End Contact Page */
+
+/* Start General Pagination */
+nav.general .pagination .page-link {
+    color: #244166;
+    background: none;
+    /*! border: none; */
+    font-family: var(--MyRiadpro);
+    font-weight: bold;
+    /*! border-radius: 0.6rem; */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none !important;
+    --bs-pagination-font-size:1.2rem
+}
+[dir="rtl"] nav.general .pagination .page-item:first-child .page-link {
+    border-radius: 0 var(--bs-pagination-border-radius) var(--bs-pagination-border-radius) 0 ;
+}
+[dir="rtl"] nav.general .pagination .page-item:last-child .page-link {
+    border-radius:  var(--bs-pagination-border-radius) 0 0 var(--bs-pagination-border-radius)  ;
+}
+nav.general .pagination .page-item.current .page-link {
+    background: #fff;
+    background: #39C0C0;
+    color: #fff;
+}
+nav.general .pagination .page-item.disabled .page-link {
+    color: #8E98A3;
+}
+/* End General Pagination */
