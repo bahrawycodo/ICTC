@@ -2108,10 +2108,13 @@ margin-right: 5px;
     width: 100%;
     height: 100%;
 }
-.page.ContactUs .ContactInfos,.page.ContactUs .ContactForm{max-width: 1000px}
+/*.page.ContactUs .ContactInfos,.page.ContactUs .ContactForm{max-width: 1000px}*/
+/*.page.ContactUs .ContactInfos{*/
+/*    padding-top: 50px;*/
+/*    padding-bottom: 50px;*/
+/*}*/
 .page.ContactUs .ContactInfos{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
 }
 .page.ContactUs .ContactInfos .card{
     position: relative;
@@ -2136,7 +2139,11 @@ margin-right: 5px;
     left: -10px;
 }
 [dir="rtl"] .page.ContactUs .ContactInfos .card i{right: -10px;left: auto}
+.page.ContactUs .ContactMix .ContactInfos .card .card-body{display: flex;align-items: center;gap:1rem}
+.page.ContactUs .ContactMix .ContactInfos .card i{position: initial;color:#0033A0;background: transparent;font-size: 1.8rem;height: auto;width: auto;}
+[dir="rtl"] .page.ContactUs .ContactMix .ContactInfos .card i.fa-phone{transform: rotateY(180deg)}
 .page.ContactUs .ContactInfos .card h6{font-family: var(--BoldFont);font-size: 0.9rem;color: #000}
+.page.ContactUs .ContactInfos .card ul{margin-bottom: 0}
 .page.ContactUs .ContactInfos .card ul li,.page.ContactUs .ContactInfos .card ul li a{list-style-type: none;color: #8C8AAB;font-family: var(--BookFont);text-decoration: none;font-size: 0.8rem;}
 [dir="rtl"] .page.ContactUs .ContactInfos .card ul li{text-align: right}
 .page.ContactUs .ContactForm {padding-bottom:50px}
@@ -2169,4 +2176,88 @@ margin-right: 5px;
     --bs-btn-color: #fff;
     --bs-btn-hover-color: #fff;
 }
+.page.ContactUs .country .form-control{
+    font-size: 0.8rem;
+    font-family: var(--BookFont);
+    line-height: 2;
+}
+.page.ContactUs .country  .form-control::placeholder {color: #8E98A3;}
+.page.ContactUs .country .form-control::-webkit-input-placeholder {color: #8E98A3;}
+.page.ContactUs .country .form-control::-moz-placeholder {color: #8E98A3;}
+.page.ContactUs .country .form-control:-ms-input-placeholder {color: #8E98A3;}
+.page.ContactUs .country .form-control:-moz-placeholder {color: #8E98A3;}
+.page.ContactUs .country  .cp span> i,.page.ContactUs .country .cp span> .mainText span:not(.b){/*! display: none; */}
+.page.ContactUs .country {
+    position: relative;
+    width: 100%;
+    background: transparent;
+}
+.page.ContactUs .country select {
+    display: none;
+}
+.page.ContactUs .country label {
+    display: flex;
+    justify-content: space-between;
+    color: #8E98A3;
+    padding: 13.4px 15px;
+    font-size: 0.9rem;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--BookFont);
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1.3rem;
+}
+.page.ContactUs .country.open label{
+    border-radius:  1.3rem 1.3rem 0 0;
+}
+.page.ContactUs .country  label > .updown {
+    font-size: 10px;
+}
+.page.ContactUs .country .listContainer{
+    position: absolute;
+    z-index: 1;
+    border: 1px solid #e6e6e6;
+    max-height: 300px;
+    border-radius: 0 0 1.3rem 1.3rem;
+    overflow: hidden;
+    background: #fff;
+    width: 100%;
+}
+.page.ContactUs .country .listContainer .form-control{
+    margin: 10px;
+    width: calc(100% - 20px);
+    box-shadow: none !important;
+    border-color:  #e6e6e6 !important;
+    background: #E4E8F0;
+    color:#8E98A3;
+    font-size: 0.8rem;
+    font-family: var(--BookFont);
+}
+.page.ContactUs .country ul {
+    width: 100%;
+    background: #fff;
+    overflow-y: auto;
+    margin-bottom: 0;
+    max-height: 240px;
+}
+.page.ContactUs .country ul li {
+    list-style-type: none;
+    color: #244166;
+    padding: 10px;
+    font-family: var(--BookFont);
+    border-bottom: 1px solid #EBEBEB;
+    cursor: pointer;
+    font-size: 0.8rem;
+
+}
+.page.ContactUs .country ul li:first-child{
+    border-top: 1px solid #e6e6e6;
+
+}
+.page.ContactUs .country ul li:last-child {
+    border-bottom: 0;
+}
+
 /* End Contact Page */
