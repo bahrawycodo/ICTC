@@ -165,5 +165,9 @@ $(document).ready(function() {
             $('.navbar').removeClass('fixed-top');
         }
     });
+    $(document).on("click",'.openChat',function (){
+        $(this).siblings('.chatContainer').slideToggle(200);
+        $(this).children('i').toggleClass('fa-paper-plane').toggleClass('fa-xmark')
+    })
 })
 
