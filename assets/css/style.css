@@ -2301,8 +2301,28 @@ nav.general .pagination .page-item.disabled .page-link {
     font-family: var(--BoldFont);
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: var(--bs-body-color);
+    line-height: 2.6rem;
 }
 .page.NewsDetails .PrimaryDetails img{width: 100%;border-radius: 20px}
+.page.NewsDetails .PrimaryDetails ul{display: flex;align-items: center;gap:1rem;padding-top: 20px}
+.page.NewsDetails .PrimaryDetails ul li{list-style-type: none;display: flex;align-items: end;gap:0.5rem;position: relative;color: var(--bs-body-color);font-family: var(--BookFont);font-size: 0.8rem;}
+.page.NewsDetails .PrimaryDetails ul li:first-child:after{content: "";position: absolute;top:2px;height:calc(100% - 4px);width:2px;background: #ddd;right: -0.5rem;}
+[dir="rtl"] .page.NewsDetails .PrimaryDetails ul li:first-child:after{left: -0.5rem;right:auto}
+.page.NewsDetails .PrimaryDetails ul li span{line-height: 0.8rem}
+.page.NewsDetails .PrimaryDetails ul li i{color: #39C0C0;font-size: 1rem;}
+.page.NewsDetails .ArticleDetails{font-family: var(--BookFont);font-size: 0.8rem;line-height: 2rem}
+.page.NewsDetails .ShareSocial span{font-family: var(--BoldFont);font-size: 0.8rem;}
+.page.NewsDetails .ShareSocial{display: flex;align-items: center;gap: 0.5rem;}
+.page.NewsDetails .ShareSocial ul{border-radius: 0;gap: 0.5rem;padding-top: 0;}
+.page.NewsDetails .ShareSocial ul li{width: 40px;height:40px;padding: 0;border: 0;border-radius: 0 !important;}
+.page.NewsDetails .ShareSocial ul li:after{content: none !important;}
+.page.NewsDetails .ShareSocial ul li a{color: #fff;width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;text-decoration: none;}
+.page.NewsDetails .ShareSocial ul li a i{color: #fff}
+.page.NewsDetails .ShareSocial ul li.facebook{background:#3e68c0 }
+.page.NewsDetails .ShareSocial ul li.twitter{background:#3e3e3e }
+.page.NewsDetails .ShareSocial ul li.linkedin{background:#15ace5 }
+.page.NewsDetails .ShareSocial ul li.messenger{background: #1f8bf8}
 /* End Blog Details */
 
 /* Start Footer Message*/
