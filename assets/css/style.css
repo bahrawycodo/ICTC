@@ -2359,3 +2359,10 @@ nav.general .pagination .page-item.disabled .page-link {
 .messageContainer .ChatBox .input-group .input-group-text{cursor: pointer;border-radius: 0;background: none;border: 0;color:#0033A0;border-left:2px solid #f7f7f9;}
 [dir=rtl] .messageContainer .ChatBox .input-group .input-group-text{border-right:2px solid #f7f7f9;border-left: none;}
 /* End Footer Message*/
+
+/* Start About us Page */
+.AboutUs img{width: 100%;border-radius: 15px;}
+.AboutUs .PrimarySection h2{font-family: var(--BoldFont);font-size: 1.2rem;color: #0033A0;margin: 15px 0}
+.AboutUs p{font-family: var(--BookFont);font-size: 0.8rem;color: var(--bs-body-color);line-height: 1.4rem;color: var(--bs-body-color);line-height: 1.8rem}
+.AboutUs .aboutsec h3{font-family: var(--BoldFont);font-size: 1rem;color:#174C81;margin-bottom: 15px}
+/* End About us Page */
