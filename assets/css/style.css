@@ -2351,7 +2351,7 @@ nav.general .pagination .page-item.disabled .page-link {
 .messageContainer .messages{height: 250px;overflow-y: auto;padding: 10px;}
 .messageContainer .messages >div{display: flex;gap: 0.5rem;align-items: center;margin-bottom:10px }
 .messageContainer .messages >div.left{direction: ltr;}
-.messageContainer .messages >div img{width: 40px;height: 40px;}
+.messageContainer .messages >div img{width: 40px;height: 40px;border-radius: 50%}
 .messageContainer .messages >div p{padding: 5px;background: #CFD2E8;border-radius: 8px 8px 8px 3px;font-family: var(--BookFont);font-size: 0.8rem;color: #270F04;margin-bottom: 0;}
 .messageContainer .messages .right p{background: #39C0C0;color: #fff; border-radius: 8px 8px 3px 8px}
 .messageContainer .ChatBox .input-group{border-top: 1px solid #f7f7f9;}
