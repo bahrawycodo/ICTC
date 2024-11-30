@@ -1519,6 +1519,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     font-family: var(--BookFont);font-size: 0.8rem;color: #174C81;line-height: normal;
 }
 .ProgramBody .tabs .tab-content .tab-pane .group ul li{position:relative;list-style-type: none;font-family: var(--BookFont);font-size: 0.8rem;color: #174C81;flex: 0 0 calc(50% - 1.5rem);line-height: normal;}
+.ProgramBody .tabs .tab-content .tab-pane .group.full ul li{flex: 0 0 calc(100% - 1.5rem)}
 .ProgramBody .tabs .tab-content .tab-pane .group ul li:before{
     content: "";
     width: 5px;
@@ -1529,6 +1530,9 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
     display: inline-block;
     margin-right: 10px;
 }
+.ProgramBody .tabs .tab-content .tab-pane .group ul li{padding-left: 15px}
+.ProgramBody .tabs .tab-content .tab-pane .group ul li ul{margin-bottom: 20px}
+[dir="rtl"] .ProgramBody .tabs .tab-content .tab-pane .group ul li{padding-left: 0;padding-right: 15px}
 [dir="rtl"] .ProgramBody .tabs .tab-content .tab-pane .group ul li:before{
     margin-left: 10px;
     margin-right: 0
