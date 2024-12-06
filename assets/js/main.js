@@ -171,3 +171,18 @@ $(document).ready(function() {
     })
 })
 
+$(document).ready(function () {
+    const $navbar = $('.navbar');
+    $navbar.addClass('fixed-top');
+    function updateNavbar() {
+        if ($(this).scrollTop() > 10) {
+            $navbar.removeClass('top-40').addClass('fixed-top top-0');
+        } else {
+            $navbar.removeClass('top-0').addClass('fixed-top top-40');
+        }
+    }
+    updateNavbar();
+    $(window).on('scroll', function () {
+        updateNavbar()
+    });
+});

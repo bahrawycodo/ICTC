@@ -5,7 +5,7 @@
 .text-align-justify{text-align:justify}
 .ImgWhite{filter: brightness(0) invert(1);}
 .bottom-25{bottom: 25%}
-main{background: #F3F5F6}
+main{background: #F3F5F6;padding-top: 60px}
 .navbar-toggler,.navbar-toggler:focus{
     border-color: #0033A0;
     box-shadow: none;
@@ -74,6 +74,12 @@ main{background: #F3F5F6}
 .top-nav .socialmedia .list-group-item a{color: #fff;display: flex;width: 24px;height: 24px;justify-content: center;align-items: center;text-decoration: none}
 /* End Top Nav */
 /* Start NavBar */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.top-40{top:40px !important;}
+.navbar{height: 100px;width: 100%;z-index: 3;    transition: top 0.2s ease}
 .navbar-brand .navbar-logo{height: 60px}
 .navbar .nav-item .nav-link{
     --bs-nav-link-padding-y:0.313rem;
