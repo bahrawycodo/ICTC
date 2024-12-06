@@ -518,7 +518,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 /* End Special Programs */
 
 /* Start Academic Credits */
-.academic-credits .credit img{height: 60px;max-width: 100%;}
+ .credit img{height: 60px;max-width: 100%;width: auto !important;}
 /* End Academic Credits */
 
 /* Start Latest News */
@@ -737,8 +737,9 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 /* End Newsletter */
 
 /* Start Clients */
-.clients .client{display: flex;justify-content: center;}
-.clients .client img{height: 60px;max-width: 100%;}
+.client{display: flex;justify-content: center;}
+.client img{height: 60px;max-width: 100%;
+    width: auto !important;}
 /* End Clients */
 
 /* Start Training Programs */
