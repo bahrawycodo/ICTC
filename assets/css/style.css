@@ -524,7 +524,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 /* End Special Programs */
 
 /* Start Academic Credits */
- .credit img{height: 60px;max-width: 100%;width: auto !important;}
+ .credit img{height: 70px;max-width: 100%;width: auto !important;}
 /* End Academic Credits */
 
 /* Start Latest News */
@@ -744,7 +744,7 @@ footer .footer-bottom ul li a{color: #fff;text-decoration: none;}
 
 /* Start Clients */
 .client{display: flex;justify-content: center;}
-.client img{height: 60px;max-width: 100%;
+.client img{height: 70px;max-width: 100%;
     width: auto !important;}
 /* End Clients */
 
